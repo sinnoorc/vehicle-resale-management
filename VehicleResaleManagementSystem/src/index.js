@@ -4,7 +4,7 @@ import "assets/demo/demo.css?v=1.5.0";
 import "assets/demo/nucleo-icons-page-styles.css?v=1.5.0";
 import "assets/scss/now-ui-kit.scss?v=1.5.0";
 import ReactDOM from "react-dom/client";
-import { BrowserRouter, Route, Switch } from "react-router-dom";
+import { BrowserRouter, Redirect, Route, Switch } from "react-router-dom";
 import Index from "views/Index.js";
 
 
@@ -39,8 +39,8 @@ root.render(
         <Route path="/PopularCar" render={(props) => <PopularCar {...props} />} exact />
         <Route path="/Search" render={(props) => <Search {...props} />} exact />
         <Route path="/ThankYou" render={(props) => <ThankYou {...props} />} exact />
-        {/* <Redirect to="/index" />
-        <Redirect from="/" to="/index" /> */}
+        <Redirect to="/index" />
+        <Redirect from="/" to="/index" />
       </Switch>
     </Switch>
   </BrowserRouter>
