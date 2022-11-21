@@ -38,28 +38,17 @@ function VehicleReg() {
       VehiNo,VehiBrand,VehiLocation,VehiOwn,VehiFuel)
     axios({
   method: 'post',
-  url: 'http://localhost:4000/vehicle',
+  url: 'http://localhost:9000/vehicle',
   data: {
     OwnName,OwnAd1,Ownad2,OwnDis,OwnPhno,OwnEmail,VehiType,
     VehiNo,VehiBrand,VehiLocation,VehiOwn,VehiFuel
   } 
-  });
-
+    });
+    setOwnName('')
+setOwnAd1("")
     toast.success(`Form Submitted ✅ `);
   }
   
-  React.useEffect(() => {
-    async function dataFetch() {
-       const data= await  axios({
-  method: 'get',
-  url: 'http://localhost:4000/vehicle',
-
-       });
-      console.log(data)
-    }
-    dataFetch()
-    
-  }, []);
 
   
   return (
