@@ -34,8 +34,8 @@ function UserReg() {
   url: 'http://localhost:9000/aliens',
   data: {
      name,ad1,ad2,district,phNo,email,pass,cPass
-  }
-});
+  } 
+  });
 
     toast.success(`Form Submitted ✅ `);
   }
@@ -60,6 +60,8 @@ function UserReg() {
     //   document.body.classList.remove("sidebar-collapse");
     // };
   }, []);
+
+  
   return (
     <><IndexNavbar />
         <Toaster
@@ -103,8 +105,10 @@ function UserReg() {
                     ><InputGroupAddon addonType="prepend">
                      <InputGroupText> <i className="RegName"></i></InputGroupText>
                     </InputGroupAddon>
+                    
                       <Input
-                        placeholder="Name"
+                      
+                        placeholder="Name" 
                       type="text"
                       value={name}
                         onChange={(e) => setName(e.target.value)}
@@ -245,7 +249,7 @@ function UserReg() {
                 <Button
                   type="button"
                     block
-onClick={handleSubmit}                    className="btn-round"
+                    onClick={handleSubmit}                    className="btn-round"
                     color="info"
               
                     size="lg"

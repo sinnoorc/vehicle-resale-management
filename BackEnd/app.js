@@ -2,6 +2,7 @@ const { urlencoded } = require('express')
 const express =require('express')
 const mongoose=require('mongoose')
 const alienRouter=require('./routers/aliens')
+//const vehiRouter=require('./routers/vehi')
 const url="mongodb+srv://Umadevi:262000@cluster0.ojnurx7.mongodb.net/?retryWrites=true&w=majority"
 const cors=require('cors')
 const app=express()  
@@ -20,6 +21,7 @@ app.use(express.json())
 app.use(express.urlencoded({extended:false}));
 
 app.use('/aliens',alienRouter)
+//app.use('/vehi',vehiRouter)
 
 app.listen(9000,() => {
     console.log('server started');

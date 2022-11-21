@@ -1,5 +1,6 @@
 import React from "react";
 
+
 // reactstrap components
 import {
   Button,
@@ -12,6 +13,7 @@ import {
   InputGroupAddon,
   InputGroupText,
   InputGroup,
+  Row,
   Container,
   Col
 } from "reactstrap";
@@ -22,6 +24,7 @@ import IndexNavbar from "components/Navbars/IndexNavbar.js";
 function UserReg() {
   const [firstFocus, setFirstFocus] = React.useState(false);
   const [lastFocus, setLastFocus] = React.useState(false);
+  
   React.useEffect(() => {
     document.body.classList.add("login-page");
     document.body.classList.add("sidebar-collapse");
@@ -36,13 +39,21 @@ function UserReg() {
   return (
     <>
       <IndexNavbar />
-      <div className="page-header clear-filter" filter-color="blue">
+      <div className="page-header clear-filter" filter-color="white">
         <div
           className="page-header-image"
           style={{
-            backgroundImage: "url(" + require("assets/img/login.jpg") + ")"
+            backgroundImage: "url(" + require("assets/img/popular.jpg") + ")"
           }}
         ></div>
+        <Container>
+            <Row>
+              <Col className="ml-auto mr-auto text-center" md="8">
+                <h2 className="title" style={{color: "black"}}><b>Popular bike brand</b></h2>
+               
+              </Col>
+            </Row>
+          </Container>
       </div>
     </>
   );

@@ -34,7 +34,11 @@ function IndexHeader() {
         ></div>
         <Container>
           <div className="content-center brand">
-            <h1 className="h1-seo"><b>ONEIRO</b></h1>
+            <br></br><br></br><br></br><br></br>
+            <br></br><br></br><br></br><br></br>
+            <br></br><br></br><br></br><br></br>
+            <br></br><br></br><br></br>
+           <h1 ><b>ONEIRO</b></h1>
             <h3>Your dream become success here</h3>
             <h4>Used cars and bikes</h4>
           </div>
